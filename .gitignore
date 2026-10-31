@@ -1,0 +1,25 @@
+# Virtual Environment
+venv/
+.venv/
+
+# Python Cache
+__pycache__/
+*.py[cod]
+
+# Secrets and Credentials
+.env
+.streamlit/secrets.toml
+
+# Trained Models
+*.pkl
+*.joblib
+*.h5
+
+# Datasets
+*.csv
+*.xlsx
+*.xls
+
+# Temporary Files
+.DS_Store
+*.log
