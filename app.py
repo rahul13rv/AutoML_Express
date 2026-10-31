@@ -39,7 +39,7 @@ from sklearn.svm import SVR, SVC
 
 warnings.filterwarnings("ignore")
 
-st.set_page_config(page_title="Smart AutoML Studio", page_icon="🤖", layout="wide")
+st.set_page_config(page_title="AutoML Express", page_icon="🤖", layout="wide")
 
 st.markdown("""
 <style>
@@ -59,7 +59,7 @@ div[data-testid="stExpander"] {border-radius:12px;}
 
 st.markdown("""
 <div class="hero">
-  <h1>🤖 Smart AutoML Studio</h1>
+  <h1>🤖 AutoML Express</h1>
   <p>Explore • Clean • Select Features • Train • Evaluate • Download your report</p>
 </div>
 """, unsafe_allow_html=True)
@@ -183,7 +183,7 @@ def pdf_report(report_data, results_df, cleaning_summary):
     doc = SimpleDocTemplate(buffer, pagesize=A4, rightMargin=38, leftMargin=38, topMargin=38, bottomMargin=38)
     styles = getSampleStyleSheet()
     story = [
-        Paragraph("Smart AutoML Studio — Model Report", styles["Title"]),
+        Paragraph("AutoML Express — Model Report", styles["Title"]),
         Spacer(1, 8),
         Paragraph(f"Generated: {report_data['generated_at']}", styles["Normal"]),
         Paragraph(f"Dataset: {report_data['dataset_name']}", styles["Normal"]),
@@ -627,4 +627,4 @@ with tab_results:
         st.success("Your AutoML workflow is complete — report and model are ready to download.")
 
 st.divider()
-st.caption("Smart AutoML Studio | Educational project. Imputation and encoding are fitted on training data to reduce data leakage. Always validate before production use.")
+st.caption("AutoML Express | Educational project. Imputation and encoding are fitted on training data to reduce data leakage. Always validate before production use.")
